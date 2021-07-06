@@ -1,25 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { Container, Row } from "react-bootstrap";
+import React, { useState, useContext, useEffect } from "react";
+import { Container, Row, Alert } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.scss";
 
 import Search from "./components/Search/Search";
 import ArticleCard from "./components/ArticleCard/ArticleCard";
 
+import { DataContext } from "./contexts/dataContext";
+
 const App = () => {
-  //getting data
-  const [originalData, setOriginalData] = useState();
+  const dataContext = useContext(DataContext);
+
   const [data, setData] = useState();
-  useEffect(() => {
-    fetch(
-      "https://newsapi.org/v2/everything?q=keyword&apiKey=a25beac6627549929d0e37c1ebd2ea3b"
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data.articles);
-        setOriginalData(data.articles);
-      });
-  }, []);
+  useEffect(() => setData(dataContext.data), [dataContext.data]);
+
   return (
     <>
       <header>
@@ -29,6 +23,9 @@ const App = () => {
         <Search />
         <Container>
           <Row>
+            {data && data.length === 0 && (
+              <Alert variant="secondary">Sorry, no articles :(</Alert>
+            )}
             {data &&
               data.map((article) => (
                 <ArticleCard

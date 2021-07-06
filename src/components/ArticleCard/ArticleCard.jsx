@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Card } from "react-bootstrap";
 
 const ArticleCard = ({ image, date, title, description }) => (
-  <Col md={4}>
+  <Col xs={12} sm={12} md={6} lg={4} >
     <Card style={{ width: "18rem" }}>
       <Card.Img variant="top" src={image} />
       <Card.Body>

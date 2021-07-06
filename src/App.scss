@@ -1,6 +1,6 @@
 $green: rgb(81, 90, 71);
 $light: rgb(216, 211, 202);
-$red: rgb(64, 4, 6);
+$red: rgb(92, 7, 10);
 $yellowlight: rgb(202, 195, 165);
 $dark: rgb(41, 46, 36);
 $defaultMargin: 1rem;
@@ -37,6 +37,10 @@ form {
   margin: $defaultMargin 0;
 }
 
+input.form-control {
+  outline: none;
+}
+
 .card {
   height: 30rem;
   line-height: 1.5rem;
@@ -59,6 +63,12 @@ form {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
   overflow: hidden;
+}
+
+.fade.alert.alert-danger.show {
+  background-color: $yellowlight;
+  color: $dark;
+  margin-top: $defaultMargin;
 }
 
 @import "~bootstrap/scss/bootstrap";
