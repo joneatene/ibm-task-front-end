@@ -37,13 +37,28 @@ form {
   margin: $defaultMargin 0;
 }
 
-.card-title {
-  font-size: 0.8rem;
-  text-transform: uppercase;
+.card {
+  height: 30rem;
+  line-height: 1.5rem;
+  margin-bottom: $defaultMargin;
 }
 
-.card-subtitle {
-  color: $yellowlight;
+.card-img,
+.card-img-top {
+  height: 10rem;
+  object-fit: cover;
+}
+
+.mb-2.text-muted.date.card-subtitle.h6 {
+  font-weight: 300;
+  color: $green;
+}
+
+.description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 }
 
 @import "~bootstrap/scss/bootstrap";

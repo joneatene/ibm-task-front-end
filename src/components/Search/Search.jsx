@@ -8,7 +8,7 @@ const Search = () => {
         <Form.Control
           placeholder="Search.."
           name="searchInput"
-          maxlength={40}
+          maxLength={40}
         />
         <InputGroup.Append>
           <Button id="basic-addon2">Search</Button>
