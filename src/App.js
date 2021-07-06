@@ -1,7 +1,10 @@
 import React from "react";
-import { Container, Form, InputGroup, Button } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.scss";
+
+import Search from "./components/Search/Search";
+import ArticleCard from "./components/ArticleCard/ArticleCard";
 
 const App = () => {
   return (
@@ -10,18 +13,12 @@ const App = () => {
         <h1 variant="primary">articles</h1>
       </header>
       <Container fluid="md">
-        <Form>
-          <InputGroup className="mb-3">
-            <Form.Control
-              placeholder="Search.."
-              name="searchInput"
-              maxlength={40}
-            />
-            <InputGroup.Append>
-              <Button id="basic-addon2">Search</Button>
-            </InputGroup.Append>
-          </InputGroup>
-        </Form>
+        <Search />
+        <Container>
+          <Row>
+            <ArticleCard />
+          </Row>
+        </Container>
       </Container>
     </>
   );

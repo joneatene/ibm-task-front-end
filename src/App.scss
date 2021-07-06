@@ -37,4 +37,13 @@ form {
   margin: $defaultMargin 0;
 }
 
+.card-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.card-subtitle {
+  color: $yellowlight;
+}
+
 @import "~bootstrap/scss/bootstrap";
