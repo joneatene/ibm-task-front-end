@@ -3,6 +3,7 @@ $light: rgb(216, 211, 202);
 $red: rgb(64, 4, 6);
 $yellowlight: rgb(202, 195, 165);
 $dark: rgb(41, 46, 36);
+$defaultMargin: 1rem;
 
 $theme-colors: (
   "primary": $green,
@@ -30,6 +31,10 @@ header h1 {
   letter-spacing: 0.5rem;
   text-transform: uppercase;
   margin: 0;
+}
+
+form {
+  margin: $defaultMargin 0;
 }
 
 @import "~bootstrap/scss/bootstrap";
