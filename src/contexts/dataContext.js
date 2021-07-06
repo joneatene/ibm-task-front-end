@@ -7,7 +7,7 @@ const DataProvider = ({ children }) => {
   const [originalData, setOriginalData] = useState();
   useEffect(() => {
     fetch(
-      "https://newsapi.org/v2/everything?q=keyword&apiKey=41ed4aec1ba5473da5d7ac45ff67401a"
+      "https://gnews.io/api/v4/search?q=example&token=1bb4cbc54b61c6428441adf8fd8c8954"
     )
       .then((res) => res.json())
       .then((data) => {

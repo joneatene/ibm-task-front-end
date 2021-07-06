@@ -31,7 +31,7 @@ const App = () => {
                 <ArticleCard
                   title={article.title}
                   description={article.description}
-                  image={article.urlToImage}
+                  image={article.image}
                   date={article.publishedAt}
                   url={article.url}
                   key={article.title}

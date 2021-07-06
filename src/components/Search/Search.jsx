@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import { Form, InputGroup, Button, Alert } from "react-bootstrap";
 import DataProvider from "../../contexts/dataContext";
 import { DataContext } from "../../contexts/dataContext";
@@ -34,16 +34,16 @@ const Search = () => {
           .filter((article) => article.title.toLowerCase().includes(input))
           .slice(0, 9)
       );
-      //   const keywords = input.split(" ");
-      //   fetch("http://localhost:8080/search", {
-      //     method: "POST",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     body: JSON.stringify({ keywords }),
-      //   })
-      //     .then((res) => res.json())
-      //     .then((data) => console.log(data));
+      const keywords = input.split(" ");
+      fetch("http://localhost:8080/search", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ keywords }),
+      })
+        .then((res) => res.json())
+        .then((data) => console.log(data));
     }
   };
 
