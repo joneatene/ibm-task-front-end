@@ -28,7 +28,6 @@ const Search = () => {
     e.preventDefault();
     const input = e.target.elements.searchInput.value.trim().toLowerCase();
     if (input && validSearch === true) {
-      //setShowLink(true);
       dataContext.setData(
         dataContext.data
           .filter((article) => article.title.toLowerCase().includes(input))
